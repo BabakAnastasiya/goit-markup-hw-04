@@ -120,9 +120,16 @@ h6 {
   color: var(--primary-text-color);
 }
 
-.auth-nav a:hover,
-.auth-nav a:focus {
+.auth-nav-icon {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+
+.auth-nav-link:hover {
   color: var(--accent-color);
+}
+
+.auth-nav-link:hover .auth-nav-icon {
   fill: var(--accent-color);
 }
 
@@ -151,10 +158,6 @@ h6 {
   letter-spacing: 0.02em;
 }
 
-.auth-nav-icon {
-  margin-right: 10px;
-}
-
 /*hero*/
 
 .hero {
@@ -167,6 +170,8 @@ h6 {
   background-repeat: no-repeat;
   background-position: center;
   height: 600px;
+  width: 1600px;
+  margin: auto;
 }
 .title {
   margin-top: 0;
@@ -334,12 +339,12 @@ h6 {
 
 .master-social {
   display: flex;
-  align-content: center;
+  justify-content: center;
 }
 
 .social-title {
   margin-bottom: 20px;
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -348,6 +353,7 @@ h6 {
 }
 
 .social-item {
+  padding-left: 0;
   display: flex;
   justify-content: center;
   width: 44px;
@@ -391,6 +397,9 @@ h6 {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+}
+
+.partner:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -398,10 +407,10 @@ h6 {
   fill: #afb1b8;
 }
 
-.partner-item:hover .partner {
+.partner:hover {
   border: 1px solid var(--accent-color);
 }
-.partner-item:hover .partner-logo {
+.partner:hover .partner-logo {
   fill: var(--accent-color);
 }
 
@@ -423,6 +432,7 @@ h6 {
 /*footer*/
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer {
   padding-top: 60px;
@@ -499,10 +509,6 @@ h6 {
   margin: 0;
 }
 
-.social-footer {
-  padding-top: 12px;
-  align-content: center;
-}
 /*portfolio*/
 
 .work-examples-section {
@@ -511,8 +517,7 @@ h6 {
 }
 
 .work-button {
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding: 6px 12px 6px 12px;
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
   font-family: inherit;
@@ -542,7 +547,13 @@ h6 {
   margin-left: 30px;
   margin-top: 30px;
 }
-.work-card-element:hover {
+
+.work-card-link {
+  display: block;
+}
+
+.work-card-link:hover,
+.work-card-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
